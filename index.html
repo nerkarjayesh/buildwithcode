@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayesh | Future Software Developer</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top,#0f172a,#020617);
+    color:white;
+    overflow-x:hidden;
+}
+
+@keyframes fadeInUp{
+    from{ opacity:0; transform:translateY(40px);}
+    to{ opacity:1; transform:translateY(0);}
+}
+
+nav{
+    background:rgba(2,6,23,0.9);
+    backdrop-filter:blur(10px);
+}
+
+.navbar-brand{
+    font-weight:700;
+    font-size:24px;
+    background:linear-gradient(90deg,#38bdf8,#a78bfa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.nav-link{
+    color:white !important;
+    font-weight:500;
+}
+
+.nav-link:hover{
+    color:#a78bfa !important;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+}
+
+.hero h1 span{
+    background:linear-gradient(90deg,#38bdf8,#a78bfa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    color:#cbd5f5;
+    max-width:600px;
+    margin:15px auto;
+}
+
+.btn-custom{
+    margin-top:20px;
+    padding:14px 32px;
+    background:linear-gradient(90deg,#38bdf8,#a78bfa);
+    border:none;
+    color:black;
+    font-weight:600;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.btn-custom:hover{
+    transform:scale(1.07);
+}
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+    font-weight:600;
+    font-size:32px;
+    background:linear-gradient(90deg,#38bdf8,#a78bfa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.skill-card, .project-card{
+    background:#020617;
+    padding:28px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.35s ease;
+    animation:fadeInUp 1s ease forwards;
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+}
+
+.skill-card::before, .project-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.15),transparent);
+    transition:0.6s;
+}
+
+.skill-card:hover::before, .project-card:hover::before{
+    left:100%;
+}
+
+.skill-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 0 18px rgba(167,139,250,0.5);
+}
+
+.project-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 0 18px rgba(56,189,248,0.5);
+}
+
+.skill-card:hover, .project-card:hover{
+    text-shadow:0 0 8px rgba(255,255,255,0.4);
+}
+
+footer{
+    background:#020617;
+    padding:40px 0;
+    text-align:center;
+}
+
+.footer-text{
+    color:#cbd5f5;
+}
+
+.navbar-toggler{
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.navbar-toggler-icon{
+    filter:invert(1);
+}
+
+.navbar-toggler:focus{
+    box-shadow:0 0 12px rgba(167,139,250,0.7);
+    border-color:#a78bfa;
+}
+
+.view-btn{
+    margin-top:15px;
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.15);
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+    background:transparent;
+}
+
+.view-btn:hover{
+    color:#a78bfa;
+    border-color:#a78bfa;
+    box-shadow:0 0 12px rgba(167,139,250,0.4);
+}
+
+.contact-link{
+    color: #38bdf8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-link:hover{
+    text-shadow: 0 0 8px rgba(56,189,248,0.7);
+    color: #a78bfa;
+}
+
+@media(max-width:992px){
+    .hero h1{ font-size:42px;}
+    .hero h3{ font-size:20px;}
+    .section-title{ font-size:28px;}
+}
+
+@media(max-width:768px){
+    section{ padding:70px 0;}
+    .hero h1{ font-size:34px;}
+    .hero p{ font-size:15px;}
+    .skill-card, .project-card{ padding:22px;}
+    .navbar-brand{ font-size:20px;}
+}
+
+@media(max-width:480px){
+    .hero h1{ font-size:28px;}
+    .hero h3{ font-size:18px;}
+    .section-title{ font-size:24px;}
+    .hero p{ font-size:14px;}
+    .btn-custom{ padding:12px 24px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">Jayesh</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#learning">Learning</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+<h1>Hi, I'm <span>Jayesh</span></h1>
+<h3>Future Software Developer</h3>
+<p>Student developer focused on C programming, problem solving and web development. Currently building strong programming fundamentals and improving logic every day.</p>
+<a href="#projects" class="btn btn-custom">Explore My Work</a>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<p style="text-align:center; max-width:600px; margin:0 auto;">I am a student who is currently learning programming and improving my logic building skills every day. My goal is to become a professional software developer and build real world projects in the future.</p>
+</section>
+
+<section id="skills">
+<h2 class="section-title">My Skills</h2>
+<div class="row g-4 justify-content-center text-center">
+  <div class="col-md-4"><div class="skill-card">C Programming</div></div>
+  <div class="col-md-4"><div class="skill-card">HTML</div></div>
+  <div class="col-md-4"><div class="skill-card">CSS</div></div>
+  <div class="col-md-4"><div class="skill-card">Problem Solving & Logic Building</div></div>
+  <div class="col-md-4"><div class="skill-card">Linux Basics</div></div>
+  <div class="col-md-4"><div class="skill-card">Loops & Conditions</div></div>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="section-title">Programming Projects</h2>
+<div class="row g-4 justify-content-center text-center">
+  <div class="col-md-4"><div class="project-card"><h4>Student Portfolio Website</h4><p>Modern portfolio website built using HTML, CSS and Bootstrap with responsive design.</p><a href="index.html" target="_blank" class="view-btn">View Project</a></div></div>
+  <div class="col-md-4"><div class="project-card"><h4>To-Do List App</h4><p>Simple to-do list layout created using HTML and CSS.</p><a href="to_do_list.html" target="_blank" class="view-btn">View Live</a></div></div>
+  <div class="col-md-4"><div class="project-card"><h4>Calculator Webpage</h4><p>A basic calculator interface designed with HTML and CSS.</p><a href="calculator.html" target="_blank" class="view-btn">View Live</a></div></div>
+  <div class="col-md-4"><div class="project-card"><h4>Color Picker Tool</h4><p>Interactive color palette created with HTML and CSS.</p><a href="color_picker.html" target="_blank" class="view-btn">View Live</a></div></div>
+  <div class="col-md-4"><div class="project-card"><h4>Tip Calculator</h4><p>Tip calculator interface built using only HTML and CSS.</p><a href="tip_calculator.html" target="_blank" class="view-btn">View Live</a></div></div>
+  <div class="col-md-4"><div class="project-card"><h4>Student Result System</h4><p>Static result card design built using HTML and CSS showing marks, percentage, and grade.</p><a href="student_result_calculator.html" target="_blank" class="view-btn">View Live</a></div></div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Me</h2>
+<p style="text-align:center;">Email: <a href="mailto:jayesh.nerkar25@pcpolytechnic.com" class="contact-link">jayesh.nerkar25@pcpolytechnic.com</a><br>Location: Pune, Maharashtra, India<br>Available for beginner level programming projects and learning opportunities.</p>
+</section>
+
+<footer>
+<p class="footer-text">© 2026 Jayesh | Future Developer </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

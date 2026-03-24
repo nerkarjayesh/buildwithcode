@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Picker</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a; /* dark background */
+    color: #e5e7eb;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #fbbf24; /* yellow accent */
+    margin-bottom: 20px;
+}
+
+p {
+    color: #cbd5f5;
+    margin-bottom: 30px;
+}
+
+.color-box {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.color-box:hover {
+    transform: scale(1.05); /* small zoom only, no glow */
+}
+
+a {
+    color: #a78bfa;
+    text-decoration: none;
+    margin-top: 30px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<h1>Color Picker Tool</h1>
+<p>Minimal color palette using HTML & CSS.</p>
+
+<div class="color-box" style="background:#38bdf8;"></div>
+<div class="color-box" style="background:#a78bfa;"></div>
+<div class="color-box" style="background:#f43f5e;"></div>
+<div class="color-box" style="background:#facc15;"></div>
+<br>
+<a href="index.html">Back to Portfolio</a>
+
+</body>
+</html>
